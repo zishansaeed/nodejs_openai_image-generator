@@ -5,17 +5,16 @@ const onSubmit = (e) => {
   document.querySelector("#image").src = "";
 
   const prompt = document.querySelector("#prompt").value;
-  const size = document.querySelector("#size").value;
 
   if (prompt === "") {
     alert("Please add some text ");
     return;
   }
 
-  generateImageRequest(prompt, size);
+  generateImageRequest(prompt);
 };
 
-const generateImageRequest = async (prompt, size) => {
+const generateImageRequest = async (prompt) => {
   try {
     showSpinner();
     const response = await fetch("/openai/generateimage", {
@@ -25,7 +24,6 @@ const generateImageRequest = async (prompt, size) => {
       },
       body: JSON.stringify({
         prompt,
-        size,
       }),
     });
 
@@ -35,12 +33,9 @@ const generateImageRequest = async (prompt, size) => {
     }
 
     const data = await response.json();
-    // console.log(data);
-
     const imgUrl = data.data;
 
     document.querySelector("#image").src = imgUrl;
-
     removeSpinner();
   } catch (error) {
     document.querySelector(".msg").textContent = error;
