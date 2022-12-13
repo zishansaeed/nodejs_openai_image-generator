@@ -2,7 +2,7 @@
 
 This application is built using Node JS, Express JS and Open AI API. This application generate images through OpenAI Dall-E models based on user inputs.
 
-<img src="public/img/home.png" width="500">
+<img src="public/image/home.png" width="500">
 
 ## Usage
 
