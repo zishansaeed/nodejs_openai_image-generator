@@ -4,6 +4,8 @@ This application is built using Node JS, Express JS and Open AI API. This applic
 
 <img src="public/image/home.PNG">
 
+https://user-images.githubusercontent.com/63700956/207344451-dea073d7-1790-4bf0-b76d-375edbae3cce.mp4
+
 ## Usage
 
 Create the .env file in the root folder and Generate your API KEY from [OpenAI](https://beta.openai.com/) and add it to the `.env` file.
